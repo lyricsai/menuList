@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>Menu</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="header">
+                <h4></h4>
+                <h3>Меню</h3>
+                <button type="button" id="buttonTheme">Сменить тему</button>
+            </header>
+
+            <main>
+                <form
+                    action="#"
+                    onsubmit="(e)=>e.preventDefault()"
+                    class="form-choice"
+                >
+                    <div class="labels">
+                        <label for="timeDay">На день</label>
+                        <input type="radio" name="time" id="timeDay" />
+                        <label for="timeWeek">На неделю</label>
+                        <input type="radio" name="time" id="timeWeek" checked />
+                        <label for="timeMonth">На месяц</label>
+                        <input type="radio" name="time" id="timeMonth" />
+                        <label for="vegan">Для веганов</label>
+                        <input type="checkbox" name="vegan" id="vegan" />
+                    </div>
+                    <div class="buttons">
+                        <button type="button" id="buttonMenu">
+                            Составить меню
+                        </button>
+                        <button type="button" id="buttonMenuSaved">
+                            Сохраненное меню
+                        </button>
+                    </div>
+                </form>
+
+                <div id="menu"></div>
+                <button id="buttonSaveMenu">Сохранить</button>
+
+                <div id="modal" class="modal">
+                    <form class="modal-content" action="#">
+                        <span class="close" id="close-icon">&times;</span>
+                        <label for="username">Имя</label>
+                        <input type="text" id="username" />
+                        <button id="buttonSaveUser">Сохранить</button>
+                    </form>
+                </div>
+            </main>
+        </div>
+        <script src="./menu.js" type="module"></script>
+        <script src="./script.js" type="module"></script>
+    </body>
+</html>

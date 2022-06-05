@@ -1,0 +1,91 @@
+ul,
+li {
+    list-style: none;
+    padding: 0.5rem 1rem;
+}
+
+button,
+input {
+    color: #044965;
+    border: 1px solid #044965;
+    border-radius: 1rem;
+    height: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    transform: translate(2px, 2px);
+    transition: all 0.3s ease 0s;
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 530px;
+}
+
+.header,
+.form-choice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.buttons {
+    margin: 10px 0;
+}
+
+#buttonTheme,
+#buttonSaveMenu {
+    float: right;
+    margin: 10px 0;
+}
+
+:root.dark-mode {
+    background: #111;
+    color: #eee;
+}
+:root:not(.dark-mode) {
+    background: #eee;
+    color: #044965;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+    width: 50%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    font-size: 20px;
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
